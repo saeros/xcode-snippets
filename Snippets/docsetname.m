@@ -1,0 +1,9 @@
+// DocSet name
+// Documentation divider
+// 
+// Platform: All
+// Language: Objective-C
+// Completion Scope: Class Interface Methods
+
+////////////////////////////////////////////////////////////////////////////////
+/// @name <#name#>
