@@ -15,19 +15,16 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return ((isIpad) ? UIInterfaceOrientationMaskAll : UIInterfaceOrientationMaskPortrait);
+    return (([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+            ? UIInterfaceOrientationMaskPortrait
+            : UIInterfaceOrientationMaskAll);
 }
 
-/* iOS 4 support */
+// iOS 4 support
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) 
-	{
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-	} 
-	else 
-	{
-	    return YES;
-	}
+    
+	return YES;
 }
-
