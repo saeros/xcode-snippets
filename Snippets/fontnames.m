@@ -12,7 +12,5 @@ for (NSString *familyName in familyNames)
     NSLog(@"Family: %@", familyName);
     NSArray *fontNames = [[UIFont fontNamesForFamilyName:familyName] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     for (NSString *fontName in fontNames)
-    {
         NSLog(@"\tFont: %@", fontName);
-    }
 }

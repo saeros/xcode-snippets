@@ -15,9 +15,9 @@
 	if (nil != superDescription) 
 		[toReturn appendString:[NSString stringWithFormat:@"%@ { ", superDescription]];
 	[toReturn appendFormat:@"%@ {%@}, ", @"<#variable#>", self.<#variable#>];
-    [toReturn appendFormat:@"%@ {%ld}, ", @"<#variable#>", (long)self.<#variable#>];
-	[toReturn appendFormat:@"%@ {%@}", @"<#variable#>", self.<#variable#>];
-	[toReturn appendString:@" }"];
+	[toReturn appendFormat:@"%@ {%ld}, ", @"<#variable#>", (long)self.<#variable#>];
+    [toReturn appendFormat:@"%@ {%@}", @"<#variable#>", self.<#variable#>];
+    [toReturn appendString:@" }"];
 	
 	return toReturn;
 }
