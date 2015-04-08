@@ -5,13 +5,6 @@
 // Language: Objective-C
 // Completion Scope: Top Level
 
-/** <#description#>.
- 
- Compatibility:
- 
- - iOS <#version#>
- 
- Prerequisite:
- 
- - <#framework#>
+/**
+ *  @brief <#description#>.
  */
