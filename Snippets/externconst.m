@@ -5,4 +5,4 @@
 // Language: Objective-C
 // Completion Scope: All
 
-extern NSString *const <#name#>;
+FOUNDATION_EXPORT NSString *const <#name#>;
