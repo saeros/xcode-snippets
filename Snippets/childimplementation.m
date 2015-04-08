@@ -7,5 +7,5 @@
 
 @throw
 	[NSException exceptionWithName:NSInvalidArgumentException
-							reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
-						  userInfo:nil];
+				reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+				userInfo:nil];
