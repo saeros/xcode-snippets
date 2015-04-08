@@ -6,18 +6,16 @@
 // Completion Scope: Class implementation
 
 #pragma mark - Description
-////////////////////////////////////////////////////////////////////////////////
-
-- (NSString *)description 
-{
+- (NSString *)description {
 	NSMutableString *toReturn = [[NSMutableString alloc] initWithString:@""];
 	NSString *superDescription = [super description];
-	if (nil != superDescription) 
+	if (superDescription.lenght) {
 		[toReturn appendString:[NSString stringWithFormat:@"%@ { ", superDescription]];
+	}
 	[toReturn appendFormat:@"%@ {%@}, ", @"<#variable#>", self.<#variable#>];
 	[toReturn appendFormat:@"%@ {%ld}, ", @"<#variable#>", (long)self.<#variable#>];
-    [toReturn appendFormat:@"%@ {%@}", @"<#variable#>", self.<#variable#>];
-    [toReturn appendString:@" }"];
+    	[toReturn appendFormat:@"%@ {%@}", @"<#variable#>", self.<#variable#>];
+    	[toReturn appendString:@" }"];
 	
 	return toReturn;
 }
