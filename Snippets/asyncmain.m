@@ -6,7 +6,5 @@
 // Completion Scope: Function or Method
 
 dispatch_async(dispatch_get_main_queue(), ^{
-    
     <#code on main thread#>
-    
 });
