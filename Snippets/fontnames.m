@@ -7,10 +7,10 @@
 
 // Get all the fonts available (system + custom)
 NSArray *familyNames = [[UIFont familyNames] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-for (NSString *familyName in familyNames)
-{
+for (NSString *familyName in familyNames) {
     NSLog(@"Family: %@", familyName);
     NSArray *fontNames = [[UIFont fontNamesForFamilyName:familyName] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-    for (NSString *fontName in fontNames)
+    for (NSString *fontName in fontNames) {
         NSLog(@"\tFont: %@", fontName);
+    }
 }
