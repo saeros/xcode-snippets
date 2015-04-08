@@ -21,12 +21,10 @@ dispatch_async(dispatch_get_global_queue(<#dispatch_queue_priority_t priority#>,
                                         code:0
                                     userInfo:@{@"status": [NSString stringWithFormat:@"%ld", (long)statusCode], @"message": @"Data is empty"}];
         }
-                                   
-       if (error){
-           // error
-           // handle error (e.g. failure(error);)
-       }
-       
-   }];
         
+        if (error) {
+            // error
+            // handle error (e.g. failure(error);)
+        }
+   }];
 });
