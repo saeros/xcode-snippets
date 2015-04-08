@@ -15,7 +15,6 @@
 		[composeViewController addImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@""]]]];
 		[composeViewController addURL:[NSURL URLWithString:<#url#>]];
 		[composeViewController setCompletionHandler:^(SLComposeViewControllerResult result) {
-            
 			switch (result) {
 				case SLComposeViewControllerResultCancelled: {
 					NSLog(@"%s - Canceled", __PRETTY_FUNCTION__);
@@ -26,9 +25,7 @@
 				default:
 					break;
 			}
-            
 		}];
-        
 		[self presentViewController:composeViewController animated:animated completion:nil];
 	}
 	else {
