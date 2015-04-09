@@ -7,11 +7,9 @@
 
 #import <MessageUI/MessageUI.h>
 
-- (void)presentModalSMSMMessageComposerViewController:(BOOL)animated
-{
-    if (NSClassFromString(@"MFMessageComposeViewController") && [MFMessageComposeViewController canSendMail])
-    {
-        MFMessageComposeViewController *composeViewController = [[MFMessageComposeViewController alloc] init];
+- (void)presentModalSMSMMessageComposerViewController:(BOOL)animated {
+    if (NSClassFromString(@"MFMessageComposeViewController") && [MFMessageComposeViewController canSendMail]) {
+        MFMessageComposeViewController *composeViewController = [MFMessageComposeViewController new];
         composeViewController.messageComposeDelegate = self;
         
         [composeViewController setBody:<#Body#>];
@@ -19,25 +17,23 @@
         
         [self presentViewController:composeViewController animated:animated completion:nil];
     }
-    else
-    {
+    else {
         [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"<#Cannot send sms message#>", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     }
 }
 
-#pragma mark - MFMessageComposeViewController delegate
-////////////////////////////////////////////////////////////////////////////////
 
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
-{
-    switch (result)
-    {
-        case MessageComposeResultCancelled:
+#pragma mark - MFMessageComposeViewController delegate
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    switch (result) {
+        case MessageComposeResultCancelled: {
             NSLog(@"%s - Cancelled", __PRETTY_FUNCTION__);
+        }
             break;
             
-        case MessageComposeResultFailed:
+        case MessageComposeResultFailed: {
             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"<#Could not send sms message#>", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+        }
             break;
             
         case MessageComposeResultSent:
