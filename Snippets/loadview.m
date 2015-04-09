@@ -5,13 +5,10 @@
 // Language: Objective-C
 // Completion Scope: Class implementation
 
-+ (<#class#> *)loadView
-{
++ (<#class#> *)loadView {
     NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil];
-    for (NSObject *obj in nibViews)
-    {
-        if ([obj isKindOfClass:[self class]])
-        {
+    for (NSObject *obj in nibViews) {
+        if ([obj isKindOfClass:[self class]]) {
             return ((<#class#> *)obj);
         }
     }
