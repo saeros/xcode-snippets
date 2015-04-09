@@ -5,11 +5,7 @@
 // Completion Scope: Function or Method
 
 <# view #>.frame = ({
-
     CGRect frame = <# view #>.frame;
-
     <# ... #>
-
     frame;
-
 });
