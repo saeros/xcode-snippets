@@ -7,11 +7,9 @@
 
 #import <MessageUI/MessageUI.h>
 
-- (void)presentModalMailComposerViewController:(BOOL)animated
-{
-    if (NSClassFromString(@"MFMailComposeViewController") && [MFMailComposeViewController canSendMail])
-    {
-        MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] init];
+- (void)presentModalMailComposerViewController:(BOOL)animated {
+    if (NSClassFromString(@"MFMailComposeViewController") && [MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *composeViewController = [MFMailComposeViewController new];
         composeViewController.mailComposeDelegate = self;
         
         [composeViewController setSubject:<#Subject#>];
@@ -24,34 +22,33 @@
         
         [self presentViewController:composeViewController animated:animated completion:nil];
     }
-    else
-    {
+    else {
         [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"<#Cannot send mail message#>", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     }
 }
 
 #pragma mark - MFMailComposeViewController delegate
-////////////////////////////////////////////////////////////////////////////////
-
 - (void)mailComposeController:(MFMailComposeViewController *)controller
           didFinishWithResult:(MFMailComposeResult)result
-                        error:(NSError *)error
-{
-    if (error)
+                        error:(NSError *)error {
+    if (error) {
         NSLog(@"%s - Error: %@", __PRETTY_FUNCTION__, error);
+    }
     
-    switch (result)
-    {
-        case MFMailComposeResultCancelled:
+    switch (result) {
+        case MFMailComposeResultCancelled: {
             NSLog(@"%s - Cancelled", __PRETTY_FUNCTION__);
+        }
             break;
             
-        case MFMailComposeResultFailed:
+        case MFMailComposeResultFailed: {
             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"<#Could not send mail message#>", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+        }
             break;
             
-        case MFMailComposeResultSaved:
+        case MFMailComposeResultSaved: {
             NSLog(@"%s - Mail saved in the drafts folder", __PRETTY_FUNCTION__);
+        }
             break;
             
         case MFMailComposeResultSent:
