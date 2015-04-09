@@ -6,11 +6,6 @@
 // Completion Scope: Class implementation
 
 #pragma mark - Memory management
-////////////////////////////////////////////////////////////////////////////////
-
-- (void)dealloc 
-{
-    [<#variable#> release];
-    
+- (void)dealloc {
     [super dealloc];
 }
