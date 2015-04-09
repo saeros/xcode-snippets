@@ -6,7 +6,5 @@
 // Completion Scope: Function or Method
 
 @synchronized(<#variable#>) {
-
     
-
 }
