@@ -9,7 +9,7 @@
 - (NSString *)description {
 	NSMutableString *toReturn = [[NSMutableString alloc] initWithString:@""];
 	NSString *superDescription = [super description];
-	if (superDescription.lenght) {
+	if (superDescription.length) {
 		[toReturn appendString:[NSString stringWithFormat:@"%@ { ", superDescription]];
 	}
 	[toReturn appendFormat:@"%@ {%@}, ", @"<#variable#>", self.<#variable#>];
