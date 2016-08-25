@@ -8,7 +8,7 @@
 #import <MessageUI/MessageUI.h>
 
 - (void)presentModalSMSMMessageComposerViewController:(BOOL)animated {
-    if (NSClassFromString(@"MFMessageComposeViewController") && [MFMessageComposeViewController canSendMail]) {
+    if (NSClassFromString(@"MFMessageComposeViewController") && [MFMessageComposeViewController canSendText]) {
         MFMessageComposeViewController *composeViewController = [MFMessageComposeViewController new];
         composeViewController.messageComposeDelegate = self;
         
