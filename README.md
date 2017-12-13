@@ -1,4 +1,4 @@
-![Platform](https://img.shields.io/badge/platform-OSX-blue.svg) [![GitHub license](https://img.shields.io/github/license/saeros/xcode-snippets.svg)](https://github.com/saeros/xcode-snippets/blob/master/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/saeros01.svg?style=social)](https://twitter.com/saeros01)
+![Platform](https://img.shields.io/badge/platform-OSX-blue.svg) [![GitHub license](https://img.shields.io/github/license/saeros/xcode-snippets.svg)](https://github.com/saeros/xcode-snippets/blob/master/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/yonicsurny.svg?style=social)](https://twitter.com/yonicsurny)
 
 
 # Xcode Snippets
